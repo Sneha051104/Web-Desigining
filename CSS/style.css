@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+/* nav css */
+nav {
+    background: white;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    /*to make items in one line*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    position: fixed;             /*its properties are top,bottom,left.right*/
+    top: 0;
+    z-index: 1;
+}
+
+.menu a {
+    text-decoration: none;
+    /*to avoid underline */
+    font-size: 20px;
+    color: #ff2b85;
+    font-family: fangsong;
+    margin: 0 10px;
+}
+
+.menu a:hover {
+    background: yellowgreen;
+    padding: 1px;
+}
+
+/* banner css */
+.banner {
+    /* background-image: url(../image/about-foodpanda-1920x539.jpeg); */
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../image/about-foodpanda-1920x539.jpeg);
+    width: 100%;
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner h1 {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    top: 40%;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    margin: auto;
+}
+
+.news {
+    background: #ff2b85;
+    height: 50PX;
+    width: 100%;
+}
+
+.news marquee {
+    color: white;
+    font-size: 22px;
+    text-shadow: 3px 3px 3px black;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.about {
+    padding: 130px 200px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 34px;
+    font-family: fangsong;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 2px chartreuse;
+}
+
+.about p {
+    letter-spacing: 0.5px;
+    line-height: 21px;
+    word-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.about button {
+    color: white;
+    background: #ff2b85;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 3px 3px 3px black;
+}
+
+.about button:hover {
+    background: linear-gradient(to bottom, cyan, yellowgreen);
+}
+
+.press {
+    padding: 130px 200px;
+    text-align: center;
+    background-image: url(../image/sunset.jfif);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 40px;
+    background-attachment: fixed;;
+}
+
+.press h1 {
+    font-size: 34px;
+    font-family: cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 2px rgb(59, 172, 187);
+}
+
+.press p {
+    letter-spacing: 0.5px;
+    line-height: 21px;
+    word-spacing: 1px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.press button {
+    color: white;
+    background: #2bff8a;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: grabbing;
+    border-radius: 16px;
+    border-radius: 14px;
+    box-shadow: 3px 3px 3px white;
+}
+
+.press button:hover {
+    background: linear-gradient(to right, purple, yellowgreen);
+}
+
+.team {
+    padding: 130px 200px;
+    text-align: center;
+    background-image: url(../image/purple.jfif);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+}
+
+
+.team h1 {
+    font-size: 34px;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-shadow: 6px 6px 6px rgb(12, 12, 14);
+    color: white;
+}
+
+.team p {
+    letter-spacing: 0.5px;
+    line-height: 21px;
+    word-spacing: 1px;
+    margin-bottom: 16px;
+    color: beige;
+}
+
+.team button {
+    color: white;
+    background: #2bff8a;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: move;
+    border-radius: 16px;
+    border-radius: 14px;
+    box-shadow: 3px 3px 3px white;
+}
+
+.team button:hover {
+    background: linear-gradient(to right, blue, yellowgreen);
+}
+
+.contact {
+    padding: 130px 200px;
+    text-align: center;
+    background: #eec485;
+}
+
+.contact h1 {
+    font-size: 34px;
+    font-family: 'Segoe UI';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-shadow: 6px 6px 6px rgb(182, 33, 33);
+    color: rgb(10, 10, 10);
+}
+
+.contact p {
+    letter-spacing: 0.5px;
+    line-height: 21px;
+    word-spacing: 1px;
+    margin-bottom: 16px;
+    color: rgb(15, 15, 13);
+}
+.contact button {
+    color: white;
+    background: #c53815;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: move;
+    border-radius: 16px;
+    border-radius: 14px;
+    box-shadow: 3px 3px 3px white;
+}
+
+.contact button:hover {
+    background: linear-gradient(to right, rgb(0, 255, 200), yellowgreen);
+}
+
+footer{
+    background: #1a242f;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding:5%;
+    
+}
+
+.fcontent h4{
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+
+}
+
+.fcontent li{
+    margin-bottom: 16px;
+    
+
+}
+
+.fcontent li a{
+    display: block;
+    color: #d6d6d6;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.fcontent li a:hover{
+    transform: translateY(-3px) translateX(-5px);
+    color: #fff;
+}
+
+.fcontent p{
+    color: #d6d6d6;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+.footercopy{
+    background: black;
+    color: white;
+    width: 100%;
+    height: 40px;
+}
+.footercopy h4{
+    text-align: center;
+    line-height: 40px;
+}

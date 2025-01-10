@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+nav{
+    height: 90px;
+    width: auto;
+    background: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* padding:0 100px; */
+    margin-top: 10px;
+    box-shadow: inset  0 -2px 0 rgba(0,0,0,0.1);
+   
+}
+.logo img{
+    padding: 0 30px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.menu a{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    font-size: 16px;
+    padding-left:15px;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+}
+.m2 i{
+    padding-left:550px;
+}
+
+.m2 a{
+    padding-right: 70px;
+}
+.m2 button{
+    height: 30px;
+    width: 70px;
+    border-radius: 30px;
+}
+.ban{
+    display: flex;
+    box-sizing: inherit;
+    margin-top: 30px;
+    
+}
+.ban1 img{
+    width: 680px;
+    object-fit: cover;
+    height: auto;
+}
+.ban2 {
+    background-color: #9e2240;
+    text-align: center;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 110px;
+    
+    
+}
+.ban2 h2{
+    color:#ffffff;
+    font-size: 50px;
+    letter-spacing: 2px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    
+}
+.ban2 p{
+    color: #ffffff;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.ban2 button{
+    min-height: 35px;
+    width: 120px;
+    border-radius: 20px;
+    background-color:#9e2240 ;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.ba{
+    display: flex;
+    box-sizing: inherit;
+    margin-top: 30px;
+}
+.ba1{
+    background-color:  #006241;
+    text-align: center;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 110px;
+    box-sizing: inherit;
+    height: 180px;
+}
+.ba1 h2{
+    color:#ffffff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-top: 40px;
+    padding-bottom: 20px; 
+}
+.ba1 p{
+    color: #ffffff;
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+.ba1 button{
+    min-height: 35px;
+    width: 90px;
+    border-radius: 20px;
+    background-color: #006241 ;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.ba2 img{
+    width: 680px;
+    box-sizing: inherit;
+}
+
+.a{
+    display: flex;
+    box-sizing: inherit;
+    margin-top: 30px;
+}
+.a1 img{
+    width: 680px;
+    object-fit: cover;
+    height: auto;
+}
+
+.a2{
+    background-color:   #d9e89a;
+    text-align: center;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 110px;
+    box-sizing: inherit;
+    height: auto;
+}
+.a2 h2{
+    color:#1e3932;
+    font-size: 50px;
+    letter-spacing: 2px;
+    padding-top: 40px;
+    padding-bottom: 20px; 
+}
+.a2 p{
+    color: #1e3932;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.a2 button{
+    min-height: 35px;
+    width: 90px;
+    border-radius: 20px;
+    background-color: #d9e89a ;
+    color:  #1e3932;
+    border: 1px solid #1e3932;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.b{
+    display: flex;
+    box-sizing: inherit;
+    margin-top: 30px;
+}
+.b1{
+    background-color:  #d2d655;
+    text-align: center;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 110px;
+    box-sizing: inherit;
+    height: auto;
+}
+.b1 h2{
+    color:#1e3932;
+    font-size: 50px;
+    letter-spacing: 2px;
+    padding-top: 40px;
+    padding-bottom: 20px; 
+}
+.b1 p{
+    color:#1e3932;
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.b1 button{
+    min-height: 35px;
+    width: 90px;
+    border-radius: 20px;
+    background-color:#d2d655 ;
+    color: #1e3932;
+    border: 1px solid #1e3932;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.b2 img{
+    width: 680px;
+    box-sizing: inherit;
+}
+
+.c{
+    display: flex;
+    box-sizing: inherit;
+    margin-top: 30px;
+}
+.c1 img{
+    width: 680px;
+    object-fit: cover;
+    height: auto;
+}
+
+.c2{
+    background-color:  #f2f0eb;
+    text-align: center;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 85px;
+    box-sizing: inherit;
+    height: auto;
+}
+.c2 h2{
+    color:#1e3932;
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding-top: 40px;
+    padding-bottom: 20px; 
+}
+.c2 p{
+    color: #1e3932;
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+.c2 button{
+    min-height: 35px;
+    width: 110px;
+    border-radius: 20px;
+    background-color:#1e3932;
+    color: #f2f0eb;
+    border: 1px solid #1e3932;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.p{
+    margin: 32px;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5px;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    box-shadow: inset  0 -2px 0 rgba(0,0,0,0.1);
+    
+}
+.p1 p{ 
+    color:rgba(0, 0, 0, 0.8);
+    text-align: center;
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif; 
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 3.2rem;
+    font-weight: 550; 
+    
+    
+}
+
+.p2 p{ 
+    text-align: center;
+    padding-bottom: 5%;
+    font-weight: 550; 
+    color:rgba(0, 0, 0, .8);
+}
+footer{
+    background: white;
+    width: auto;
+    height: auto;
+    display: flex;
+    padding:2%;
+    box-shadow: inset  0 -2px 0 rgba(0,0,0,0.2);
+    
+}
+.fcontent{
+    width: 220px;
+    padding-left: 30px;
+    
+}
+.fcontent h2{
+    font-family:SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif; 
+    font-size: 19px;
+    font-weight: 500;
+    word-spacing: 2px;
+    color: black
+}
+.fcontent li{
+    list-style: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.4);
+    font-family:SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif; 
+    font-size: 15px;
+    padding-top: 35px;
+    font-weight: bold;
+}
+.ficon{
+    padding-top:2% ;
+    padding-left: 4%;
+    
+}
+.ficon i {
+    font-size: 25px;
+    color: white;
+    background-color: black; /* Circle background color */
+    border-radius: 50%;    /* Makes the icon circular */
+    padding: 5px;         /* Space around the icon inside the circle */
+    margin: 5px;          /* Space between icons */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.ficon i:hover {
+    background-color: #6b6767; /* Darker background on hover */
+    color: #1b1b1b;
+}
+.flist{
+    padding-bottom: 4%;
+}
+.flist li{
+    
+    padding-top: 35px;
+    padding-left: 4%;
+}
+.flist a{
+    color: rgba(0,0,0,0.8);
+    font-family:SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif; 
+    font-size: 15px;
+    font-weight: bold;
+}
+.flist p{
+    
+    padding-top: 35px;
+    padding-left: 4%;
+    color: rgba(0,0,0,0.8);
+    font-family:SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif; 
+    font-size: 15px;
+    
+}
