@@ -1,140 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        .error {
-            color: red;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - RENTROOF</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <h1 style="background-color: rgb(252, 68, 1); font-family: cursive; font-style: italic; width: 100%;"
-                class="text-center mt-3 text-white">Login</h1>
-            <p>
-                <center style="font-size: 21px;">"Find Your Perfect Space – Hassle-Free Rentals Made Easy!"</center>
-            </p>
-            <div class="col-md-3 mt-3"></div>
-            <div class="col-md-6 mt-3">
-                <form id="loginForm">
-                    <div class="mb-3">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" class="form-control" placeholder="Username">
-                        <span class="error" id="usernameError"></span>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="email">
-                        <span class="error" id="emailError"></span>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" class="form-control" placeholder="password">
-                        <span class="error" id="passwordError"></span>
-                    </div>
-                    <div class="mb-3">
-                        <label for="profileType">Profile Type</label>
-                        <select id="profileType" class="form-control">
-                            <option value="">Select Your Profile</option>
-                            <option value="Owner">Owner</option>
-                            <option value="Tenant">Tenant</option>
-                        </select>
-                        <span class="error" id="profileTypeError"></span>
-                    </div>
-                    <div style="padding-bottom: 2%;">
-                        <center><button type="submit" style="background: rgb(252, 68, 1);color: white;font-family: cursive;">Submit</button></center>
-                    </div>
-                </form>
-            </div>
-        </div>
+  <div class="auth-container">
+    <!-- Left Side - Image -->
+    <div class="auth-image col-md-6 d-none d-md-flex">
+      <img src="images/house1.png" alt="Modern apartment interior" class="position-absolute w-100 h-100" style="object-fit: cover;">
+      <div class="auth-image-content text-center">
+        <h1 class="display-5 fw-bold mb-4">Welcome to RENTROOF</h1>
+        <p class="lead">The easiest way to find your perfect rental home or list your property.</p>
+      </div>
     </div>
-
-    <footer style="background: #1a242f; width: 100%; height: 150px; display: flex; justify-content: space-between;
-    padding: 2%; padding-bottom: 10px;">
-        <div>
-            <a href="rentroof.html" style="color: #fff; margin-bottom: 1.5rem; font-size: 20px; font-style: italic;
-            font-family: cursive;"> RentRoof - Rental Home Services</a>
-            <p style="color: #fff; margin-bottom: 1.5rem; font-size: 18px; padding-top: 15px;">"Find Your Perfect Space – Hassle-Free Rentals Made Easy!"</p>
+    
+    <!-- Right Side - Form -->
+    <div class="auth-form col-12 col-md-6">
+      <div class="d-flex justify-content-between align-items-center mb-4 px-3">
+        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="images/logo.png" alt="RENTROOF Logo" width="40" height="40" class="me-2">
+          <span class="fw-bold text-accent">RENT<span class="text-secondary">ROOF</span></span>
+        </a>
+      </div>
+      
+      <div class="auth-form-container mx-auto">
+        <div class="text-center mb-4">
+          <h1 class="h3 text-accent mb-2">Welcome back</h1>
+          <p class="text-muted">Enter your credentials to access your account</p>
         </div>
-    </footer>
+        
+        <ul class="nav nav-tabs mb-4" id="authTabs" role="tablist">
+          <li class="nav-item w-50" role="presentation">
+            <button class="nav-link active w-100" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-tab-pane" type="button" role="tab" aria-controls="login-tab-pane" aria-selected="true">Login</button>
+          </li>
+          <li class="nav-item w-50" role="presentation">
+            <button class="nav-link w-100" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-tab-pane" type="button" role="tab" aria-controls="signup-tab-pane" aria-selected="false">Sign Up</button>
+          </li>
+        </ul>
+        
+        <div class="tab-content" id="authTabsContent">
+          <!-- Login Tab -->
+          <div class="tab-pane fade show active" id="login-tab-pane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
+            <form id="login-form" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <label for="password" class="form-label mb-0">Password</label>
+                  <a href="forgot-password.html" class="small text-primary">Forgot password?</a>
+                </div>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="password" required>
+                  <button class="btn btn-outline-secondary toggle-password" type="button">
+                    <i class="fa fa-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Please enter your password.</div>
+              </div>
+              
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember-me">
+                <label class="form-check-label" for="remember-me">Remember me</label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary w-100 py-2" id="login-btn">
+                <span class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
+                Login
+              </button>
+            </form>
+            
+            <div class="position-relative my-4">
+              <hr>
+              <p class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small">Or continue with</p>
+            </div>
+            
+            <div class="row g-2 mb-4">
+              <div class="col-6">
+                <button class="btn btn-outline-secondary w-100">
+                  <i class="fab fa-google me-2"></i> Google
+                </button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-outline-secondary w-100">
+                  <i class="fab fa-facebook-f me-2"></i> Facebook
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Signup Tab -->
+          <div class="tab-pane fade" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
+            <form id="signup-form" class="needs-validation" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-6">
+                  <label for="first-name" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="first-name" required>
+                  <div class="invalid-feedback">Please enter your first name.</div>
+                </div>
+                <div class="col-6">
+                  <label for="last-name" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="last-name" required>
+                  <div class="invalid-feedback">Please enter your last name.</div>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="signup-email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="signup-email" placeholder="name@example.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="signup-password" class="form-label">Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="signup-password" required>
+                  <button class="btn btn-outline-secondary toggle-password" type="button">
+                    <i class="fa fa-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Please create a password.</div>
+                <div class="form-text">Password must be at least 8 characters long with a number and a special character.</div>
+              </div>
+              
+              <div class="mb-3">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <div class="input-group">
+                  <input type="password" class="form-control" id="confirm-password" required>
+                  <button class="btn btn-outline-secondary toggle-password" type="button">
+                    <i class="fa fa-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Passwords do not match.</div>
+              </div>
+              
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">
+                  I agree to the <a href="terms.html" class="text-primary">Terms of Service</a> and <a href="privacy.html" class="text-primary">Privacy Policy</a>
+                </label>
+                <div class="invalid-feedback">You must agree to the terms and conditions.</div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary w-100 py-2" id="signup-btn">
+                <span class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
+                Create Account
+              </button>
+            </form>
+            
+            <div class="position-relative my-4">
+              <hr>
+              <p class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted small">Or continue with</p>
+            </div>
+            
+            <div class="row g-2 mb-4">
+              <div class="col-6">
+                <button class="btn btn-outline-secondary w-100">
+                  <i class="fab fa-google me-2"></i> Google
+                </button>
+              </div>
+              <div class="col-6">
+                <button class="btn btn-outline-secondary w-100">
+                  <i class="fab fa-facebook-f me-2"></i> Facebook
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-auto text-center py-4 border-top small text-muted">
+        &copy; <span id="current-year"></span> RENTROOF. All rights reserved.
+      </div>
+    </div>
+  </div>
 
-    <script>
-        // Hardcoded credentials for testing
-        const hardcodedUsername = 'user123';
-        const hardcodedPassword = 'pass123';
-
-        document.getElementById('loginForm').addEventListener('submit', function (event) {
-            // Clear previous error messages
-            document.getElementById('usernameError').innerText = '';
-            document.getElementById('emailError').innerText = '';
-            document.getElementById('passwordError').innerText = '';
-            document.getElementById('profileTypeError').innerText = '';
-
-            let valid = true;
-
-            // Get form values
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const profileType = document.getElementById('profileType').value;
-
-            // Username validation
-            if (username.trim() === '') {
-                document.getElementById('usernameError').innerText = 'Username is required.';
-                valid = false;
-            }
-
-            // Email validation
-            if (email.trim() === '') {
-                document.getElementById('emailError').innerText = 'Email is required.';
-                valid = false;
-            } else {
-                // Simple email format validation
-                const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-                if (!email.match(emailPattern)) {
-                    document.getElementById('emailError').innerText = 'Invalid email format.';
-                    valid = false;
-                }
-            }
-
-            // Password validation
-            if (password.trim() === '') {
-                document.getElementById('passwordError').innerText = 'Password is required.';
-                valid = false;
-            }
-
-            // Profile type validation
-            if (profileType === '') {
-                document.getElementById('profileTypeError').innerText = 'Please select a profile type.';
-                valid = false;
-            }
-
-            // Check hardcoded credentials
-            if (username !== hardcodedUsername || password !== hardcodedPassword) {
-                document.getElementById('passwordError').innerText = 'Invalid username or password.';
-                valid = false;
-            }
-
-            // Prevent form submission if validation fails
-            if (!valid) {
-                event.preventDefault();
-            } else {
-                alert('Login successful!');
-                // Here you can add an actual form submission action
-                // like sending data to the server using an AJAX request
-            }
-        });
-    </script>
-
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Toggle password visibility
+    document.querySelectorAll('.toggle-password').forEach(button => {
+      button.addEventListener('click', function() {
+        const input = this.previousElementSibling;
+        const icon = this.querySelector('i');
+        
+        if (input.type === 'password') {
+          input.type = 'text';
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+        } else {
+          input.type = 'password';
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+        }
+      });
+    });
+    
+    // Form validation
+    (function () {
+      'use strict'
+      
+      const forms = document.querySelectorAll('.needs-validation');
+      
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          event.preventDefault();
+          
+          if (!form.checkValidity()) {
+            event.stopPropagation();
+          } else {
+            // Show loading spinner
+            const button = form.querySelector('button[type="submit"]');
+            const spinner = button.querySelector('.spinner-border');
+            const originalText = button.textContent.trim();
+            
+            spinner.classList.remove('d-none');
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+              spinner.classList.add('d-none');
+              button.disabled = false;
+              
+              if (form.id === 'login-form') {
+                window.location.href = 'index.html';
+              } else {
+                // Show success message for signup
+                const alert = document.createElement('div');
+                alert.className = 'alert alert-success mt-3';
+                alert.textContent = 'Account created successfully! You can now log in.';
+                form.appendChild(alert);
+                
+                // Switch to login tab after successful signup
+                setTimeout(() => {
+                  document.getElementById('login-tab').click();
+                  form.removeChild(alert);
+                }, 3000);
+              }
+            }, 1500);
+          }
+          
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
 </body>
-
 </html>
+
